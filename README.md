@@ -8,6 +8,7 @@ CRUD/To-Do application
 -Read 
 -Update
 -delete
+ POST, PUT, and DELETE requests so we can modify our database. POST request is for adding data, a PUT request is typically for Updating data and a DELETE request is for, well, deleting data.
 1. Scaffolding
 
 A makefile, a requirements file, and the test files were created. They were all run by github actions as a measure of continuous integration. 
