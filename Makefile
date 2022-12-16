@@ -6,10 +6,23 @@ format:
 	black *.py
 
 lint:
-	pylint --disable=R,C project1.py
+	pylint --disable=R,C --ignore-patterns=test_.*?py *.py
+	
+
+refactor: format lint
 
 test:
-	python -m pytest -vv test_project.py
+	python -m pytest -vv test.py
 
-all: install lint test
-uvicorn main:app --reload
+# build:
+# 	#build container
+# 	docker build -t deploy-fastapi_klap .
+
+deploy:
+	aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 181371422128.dkr.ecr.us-east-1.amazonaws.com	
+	docker build -t todo_app .
+	docker tag todo_app:latest 181371422128.dkr.ecr.us-east-1.amazonaws.com/todo_app:latest
+	docker push 181371422128.dkr.ecr.us-east-1.amazonaws.com/todo_app:latest
+
+
+all: install lint test format deploy
