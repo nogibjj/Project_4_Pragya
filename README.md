@@ -9,6 +9,12 @@ CRUD/To-Do application
 -Update
 -delete
  POST, PUT, and DELETE requests so we can modify our database. POST request is for adding data, a PUT request is typically for Updating data and a DELETE request is for, well, deleting data.
-1. Scaffolding
 
+1. Scaffolding
 A makefile, a requirements file, and the test files were created. They were all run by github actions as a measure of continuous integration. 
+
+2. Fastapi 
+    i. main. py - FastAPI APP
+    ii. database.py - connection to sql
+    iii. models.py- creating the table
+    iv. dataschema- pydantic for data validation
