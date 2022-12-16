@@ -1,5 +1,6 @@
 pytest
 pylint
+black
 ipython
 fastapi
 uvicorn[standard]
