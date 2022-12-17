@@ -1,5 +1,5 @@
 # Project_4_Pragya
-# Continuous Delivery of FastAPI Data Engineering API on AWS
+# Create a microservice using FastAPI Data Engineering API 
 
 The objective of this project is to create a microservice using FastAPI and deploy it on AWS. 
 Building a CRUD application using FastAPI. 
